@@ -2,8 +2,8 @@ version: '3'
 
 services:
   web:
-    image: my_django_app:latest # Nom de l'image Docker
-    container_name: django_web_container # Nom du conteneur
+    image: my_django_app:latest 
+    container_name: django_web_container 
     build: .
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
