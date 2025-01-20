@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résumé Automatique de Texte</title>
+</head>
+<body>
+    <h1>Résumé Automatique de Texte</h1>
+    <form method="post">
+        {% csrf_token %}
+        <textarea name="text" rows="10" cols="50" placeholder="Entrez votre texte ici...">{{ text }}</textarea><br><br>
+        <button type="submit">Générer le résumé</button>
+    </form>
+
+    {% if summary %}
+        <h2>Résumé généré :</h2>
+        <p>{{ summary }}</p>
+    {% endif %}
+</body>
+</html>
